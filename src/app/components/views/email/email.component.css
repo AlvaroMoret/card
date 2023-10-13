@@ -1,0 +1,27 @@
+.email-view{
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.form-email{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.input-60{
+  width: 60%;
+}
+
+.input-100{
+  width: 100%;
+}
+
+.input-text{
+  height: 20vh;
+}
+

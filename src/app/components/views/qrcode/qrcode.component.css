@@ -1,0 +1,14 @@
+.qrcode{
+    width: 100%;
+    height: 55%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.qrcode img{
+    height: 45vh;
+    aspect-ratio: 1/1;
+}

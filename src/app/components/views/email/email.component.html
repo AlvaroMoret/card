@@ -1,0 +1,46 @@
+<div class="email-view">
+  <form class="form-email">
+
+    <mat-form-field class="">
+      <mat-label>E-mail</mat-label>
+      <input type="email" matInput placeholder="E-mail" value="" [(ngModel)]="email" name="email">
+    </mat-form-field>
+
+    <mat-form-field class="input-60">
+      <mat-label>Assunto</mat-label>
+      <mat-select [(value)]="selectAssunto">
+        <mat-option value="Orçamento">
+          Orçamento
+        </mat-option>
+        <mat-option value="Dúvida">
+          Dúvida
+        </mat-option>
+        <mat-option value="Outro">
+          Outro
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="(selectAssunto == 'Outro');else vazio">
+      <mat-form-field class="input-100">
+        <mat-label>Assunto</mat-label>
+        <input matInput placeholder="Assunto" [(ngModel)]="assunto" name="assunto" [disabled]="!(selectAssunto == 'Outro')">
+      </mat-form-field>
+    </div>
+
+    <ng-template #vazio></ng-template>
+
+    <mat-form-field class="input-text">
+      <mat-label>Mensagem</mat-label>
+      <textarea matInput placeholder="Mensagem" [(ngModel)]="mensagem" name="mensagem"></textarea>
+    </mat-form-field>
+
+      <mat-form-field class="input-text" *ngIf="(selectAssunto == 'Orçamento');else vazio">
+        <mat-label>Informações do Serviço</mat-label>
+        <textarea matInput placeholder="Informações do Serviço" [(ngModel)]="mensagemExtra" name="mensagemExtra"></textarea>
+      </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="enviarEmail()">Enviar</button>
+
+  </form>
+</div>

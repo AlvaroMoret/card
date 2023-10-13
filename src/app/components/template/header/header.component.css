@@ -1,0 +1,144 @@
+.header{
+  margin-top: 10vh;
+  margin-bottom: -20px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px 30px 30px;
+  border-radius: 10px 10px 0 0;
+  color: var(--font-color);
+}
+
+.foto-perfil img{
+  border-radius: 50%;
+  margin-top: -55px;
+}
+
+.info{
+  text-align: center;
+}
+
+
+.row-contatos{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.row-contatos a{
+  text-decoration: none;
+}
+
+.row-contatos a:hover{
+  transform: scale(1.1);
+}
+
+.div-link-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 4vw;
+  color: #e4e8f0;
+}
+
+.fa{
+  font-size: 15vw;
+}
+
+.fa-home{
+  color: #e4e8f0;
+}
+
+.fa-qrcode{
+  color: #000000;
+}
+
+.fa-whatsapp{
+  color: #25d366;
+}
+
+.fa-envelope{
+  color: #00aeff;
+}
+
+.fa-instagram{
+  background: linear-gradient(297deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+}
+
+.switch input {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.off {
+  position: absolute;
+  content: "";
+  height: 2em;
+  width: 2em;
+  background-color: white;
+  transition: .4s;
+  image-rendering: pixelated;
+  opacity: 1;
+}
+
+.on {
+  position: absolute;
+  content: "";
+  height: 2em;
+  width: 2em;
+  background-color: white;
+  transition: .4s;
+  image-rendering: pixelated;
+  opacity: 0;
+}
+
+.switch input:checked ~ .on {
+  opacity: 1;
+}
+
+div.check{
+  padding-top: 3vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 600px) {
+  .fa{
+    font-size:8vw;
+  }
+  .row-contatos{
+    justify-content: space-evenly;
+  }
+  .div-link-header{
+    font-size: 2vw;
+  }
+  .header{
+    padding: 0 30px 60px 30px;
+  }
+}

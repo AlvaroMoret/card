@@ -1,0 +1,25 @@
+<div class="entrada">
+  <mat-form-field>
+    <mat-label>tipo</mat-label>
+    <mat-select [(value)]="type">
+      <mat-option value="Sax">
+        Saxofone
+      </mat-option>
+      <mat-option value="Piano" default>
+        Piano
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <div class="piano">
+
+
+    <div class="octive" *ngFor="let o of octives; let lst = last;">
+      <div class="key" *ngFor="let key of notes; " (mousedown)="play(key+o);" (mouseup)="release(key+o)" [ngClass]="{'sharp':( key.indexOf('#') >= 1), 'last':lst}">
+      {{key}}
+      </div>
+    </div>
+  </div>
+
+</div>
