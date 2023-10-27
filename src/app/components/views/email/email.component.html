@@ -1,15 +1,15 @@
 <div class="email-view">
   <form class="form-email">
 
-    <mat-form-field class="">
-      <mat-label>E-mail</mat-label>
+    <mat-form-field class="opcional">
+      <mat-label>E-mail - Opcional</mat-label>
       <input type="email" matInput placeholder="E-mail" value="" [(ngModel)]="email" name="email">
     </mat-form-field>
 
-    <mat-form-field class="input-60">
+    <mat-form-field class="input-100">
       <mat-label>Assunto</mat-label>
-      <mat-select [(value)]="selectAssunto">
-        <mat-option value="Orçamento">
+      <mat-select [(value)]="selectAssunto" required>
+        <mat-option value="Orçamento" default>
           Orçamento
         </mat-option>
         <mat-option value="Dúvida">
@@ -24,7 +24,8 @@
     <div *ngIf="(selectAssunto == 'Outro');else vazio">
       <mat-form-field class="input-100">
         <mat-label>Assunto</mat-label>
-        <input matInput placeholder="Assunto" [(ngModel)]="assunto" name="assunto" [disabled]="!(selectAssunto == 'Outro')">
+        <input matInput placeholder="Assunto" [(ngModel)]="assunto" name="assunto" [disabled]="!(selectAssunto == 'Outro')" [required]="selectAssunto == 'Outro'">
+        <mat-error *ngIf="assControl.invalid">{{getErrorAssunto()}}</mat-error>
       </mat-form-field>
     </div>
 
@@ -32,7 +33,8 @@
 
     <mat-form-field class="input-text">
       <mat-label>Mensagem</mat-label>
-      <textarea matInput placeholder="Mensagem" [(ngModel)]="mensagem" name="mensagem"></textarea>
+      <textarea matInput placeholder="Mensagem" [(ngModel)]="mensagem" name="mensagem" required></textarea>
+      <mat-error *ngIf="msgControl.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
 
       <mat-form-field class="input-text" *ngIf="(selectAssunto == 'Orçamento');else vazio">
@@ -40,7 +42,7 @@
         <textarea matInput placeholder="Informações do Serviço" [(ngModel)]="mensagemExtra" name="mensagemExtra"></textarea>
       </mat-form-field>
 
-    <button mat-raised-button color="primary" (click)="enviarEmail()">Enviar</button>
+    <button mat-raised-button class="btn-enviar" (click)="enviarEmail()">Enviar</button>
 
   </form>
 </div>

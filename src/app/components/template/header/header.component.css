@@ -40,27 +40,24 @@
   flex-direction: column;
   align-items: center;
   font-size: 4vw;
-  color: #e4e8f0;
+  color: var(--font-color);
 }
 
 .fa{
   font-size: 15vw;
 }
 
-.fa-home{
-  color: #e4e8f0;
-}
-
 .fa-qrcode{
-  color: #000000;
+  color: var(--bl-color);
 }
 
 .fa-whatsapp{
   color: #25d366;
 }
 
-.fa-envelope{
-  color: #00aeff;
+.fa-envelope,
+.fa-home{
+  color: var(--font-color);
 }
 
 .fa-instagram{
@@ -130,13 +127,14 @@ div.check{
 
 @media (min-width: 600px) {
   .fa{
-    font-size:8vw;
+    font-size:6vw;
   }
   .row-contatos{
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 5vw;
   }
   .div-link-header{
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   .header{
     padding: 0 30px 60px 30px;

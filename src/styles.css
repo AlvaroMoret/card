@@ -4,17 +4,23 @@
   --sec-color: #2d2d3a;
   --terc-color: #2d3a2d;
   --bl-color: #000000;
-  --font-color: #918874;
-  --font-bt-color: #ffffff;
+  --font-color: #b5b1a8;
+  --font-bt-color: #2d2d3a;
+  --font-bth-color: #ffffff;
+  --mdc-filled-text-field-focus-label-text-color: #1b1b1b;
+  --mdc-filled-text-field-focus-active-indicator-color: #1b1b1b;
 }
 
 :root .clear{
-  --bg-color: #1e6b0b;
-  --sec-color: #0b6b45;
+  --bg-color: #f5f5f5;
+  --sec-color: #8d8d8d;
   --terc-color: #2d3a2d;
-  --bl-color: #d4f1d0;
-  --font-color: #ffffff;
-  --font-bt-color: #ffffff;
+  --bl-color: #8d8d8d;
+  --font-color: #1b1b1b;
+  --font-bt-color: #292828;
+  --font-bth-color: #292828;
+  --mdc-filled-text-field-focus-label-text-color: #1b1b1b;
+  --mdc-filled-text-field-focus-active-indicator-color: #1b1b1b;
 }
 
 

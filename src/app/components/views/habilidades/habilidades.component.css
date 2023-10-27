@@ -24,12 +24,13 @@
   font-weight: bold;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--sec-color);
+  color: var(--font-bt-color);
   transition: all 1000ms;
   font-size: 15px;
   position: relative;
   overflow: hidden;
   outline: 2px solid var(--sec-color);
+  max-height: 9vh;
 }
 
 .item-button span{
@@ -42,7 +43,7 @@ li a{
 }
 
 .item-button:hover {
-  color: #ffffff;
+  color: var(--font-bth-color);
   transform: scale(1.1);
   outline: 2px solid #70bdca;
   box-shadow: 4px 5px 17px -4px var(--sec-color);
@@ -73,5 +74,12 @@ li a{
   .item-list{
     display: grid;
     justify-content: center;
+  }
+  .item-button span{
+    font-size: 3vw;
+    margin-right: 1vw;
+  }
+  .item-button{
+    padding: 1em 11em;
   }
 }

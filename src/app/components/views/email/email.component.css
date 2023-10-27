@@ -11,6 +11,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 2vw;
+  max-width: 750px;
+  margin-inline: auto;
 }
 
 .input-60{
@@ -24,4 +26,5 @@
 .input-text{
   height: 20vh;
 }
+
 
